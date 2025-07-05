@@ -1,0 +1,54 @@
+.history-container {
+  position: relative;
+  font-family: sans-serif;
+
+  .header-history {
+    margin: 20px 0;
+  }
+
+  .alert {
+    width: 200px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .history-item {
+    padding: 12px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #fafbfc;
+    transition: background 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    pre {
+      background: inherit;
+      max-height: 100px;
+      overflow: auto;
+      width: 100%;
+      scrollbar-width: thin;
+      scrollbar-color: #ccc transparent;
+
+      code {
+        background: inherit;
+      }
+    }
+
+    &:hover {
+      background: #f0f1f3;
+    }
+
+    &:active {
+      background: #e0e1e3;
+    }
+
+    .history-item-actions {
+      display: flex;
+      gap: 8px;
+    }
+  }
+}

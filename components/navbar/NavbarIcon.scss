@@ -1,0 +1,54 @@
+$blue: #351C57;
+
+.nav-icon {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $blue;
+  font-size: 18px;
+  position: relative;
+
+  .nav-icon-button {
+    position: absolute;
+    right: -15px;
+    bottom: -15px;
+    background-color: $blue;
+    color: black;
+    z-index: 999;
+    border: 1px solid gray;
+  }
+
+  .nav-icon-link {
+    display: block;
+    height: fit-content;
+    margin: auto;
+    .nav-icon-logo-big {
+      width: 150px;
+      transition: width 0.5s ease;
+    }
+  }
+
+
+  .nav-icon-logo-small {
+    width: 30px;
+    // transition: width 3s ease;
+  }
+
+
+  .MuiTouchRipple-root {
+    width: 0;
+  }
+
+  .MuiButtonBase-root {
+    padding: 3px;
+
+    &:hover {
+      background-color: #629ede;
+    }
+  }
+
+  .MuiSvgIcon-root {
+    z-index: 999;
+  }
+}

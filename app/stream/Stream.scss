@@ -1,0 +1,46 @@
+$blue: #351C57;
+
+.MuiTableHead-root {
+  background-color: $blue;
+
+  .MuiTableRow-root {
+    background-color: $blue;
+
+    .MuiTableCell-root {
+      background-color: $blue;
+    }
+  }
+}
+
+.stream-container {
+  .search-container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 10px;
+  }
+
+  .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    size: 20px;
+    color: $blue;
+    z-index: 10000;
+  }
+}
+
+.paging-container {
+  position: 'sticky';
+  bottom: 0;
+  left: 0;
+  background: '#fff';
+  z-index: 2;
+  width: '100%';
+  border-top: '1px solid #e0e0e0';
+}
+
+.MuiTableCell-root {
+  padding: 8px !important;
+}

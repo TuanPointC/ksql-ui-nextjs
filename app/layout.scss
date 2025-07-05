@@ -1,0 +1,36 @@
+$blue: #351C57;
+
+.container {
+  display: flex;
+  width: 100%;
+
+  .left-block {
+    height: 100vh;
+    background-color: $blue;
+    color: white;
+    position: relative; // Add this line
+    overflow: visible; // Add this line
+
+    .MuiPaper-root {
+      background-color: #351C57;
+      color: white;
+      overflow: visible;
+    }
+
+    .MuiListItem-root {
+      margin-bottom: 10px;
+    }
+
+    .MuiListItemIcon-root {
+      color: rgb(255, 255, 255);
+    }
+  }
+
+  .right-block {
+    flex: 1;
+    min-height: 90vh;
+    padding: 10px;
+    background-color: #f2f6fe;
+    min-width: 0;
+  }
+}

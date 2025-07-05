@@ -1,0 +1,60 @@
+.editor-container {
+  display: flex;
+  height: calc(100vh - 20px);
+  width: 100%;
+  overflow: hidden;
+
+  .left-block {
+    position: relative;
+    width: 50%;
+    overflow: auto;
+    max-width: 70vw;
+    min-width: 35vw;
+
+    .button-submit {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      z-index: 100;
+      background-color: none;
+      color: white;
+    }
+
+    .button-format {
+      position: absolute;
+      right: 5px;
+      top: 50px;
+      z-index: 100;
+      background-color: none;
+      color: white;
+    }
+  }
+
+  .resizer {
+    width: 5px;
+    cursor: col-resize;
+    background-color: gray;
+  }
+
+  .right-block-request {
+    position: relative;
+    flex-grow: 1;
+    overflow: auto;
+    max-width: 70vw;
+    min-width: 10vw;
+
+    .loader {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+    }
+  }
+
+  .object-content {
+    max-width: 500px;
+    min-width: 10vw;
+  }
+}

@@ -1,0 +1,50 @@
+.ksql-container {
+  min-height: 100vh;
+  font-family: sans-serif;
+  max-width: calc(100vw - 68px);
+
+  .loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .card {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .label {
+        font-weight: 500;
+        color: #4b5563;
+        margin-right: 10px;
+      }
+
+      .value {
+        color: #1f2937;
+        word-break: break-word;
+
+        &.running {
+          font-weight: bold;
+          color: #16a34a;
+        }
+
+        &.stopped {
+          font-weight: bold;
+          color: #dc2626;
+        }
+      }
+    }
+  }
+}

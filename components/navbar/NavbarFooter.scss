@@ -1,0 +1,28 @@
+.navbar-footer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 20px;
+
+  .select-env-big {
+    min-width: 180px;
+    margin-left: 20px;
+  }
+
+  .select-env-small {
+    min-width: 55px;
+    margin-left: 3%;
+
+    .MuiFormLabel-root {
+      font-size: 7px;
+    }
+
+    .MuiInputBase-root {
+      
+    }
+
+    .MuiSelect-select {
+      font-size: 0;
+    }
+  }
+}
