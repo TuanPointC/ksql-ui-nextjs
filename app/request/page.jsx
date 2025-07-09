@@ -73,21 +73,25 @@ const page = () => {
 
   async function showValue() {
     try {
-      setResponse({});
+      // setResponse({});
       setLoading(true);
       const query = editorRef.current.getValue();
 
       addCommands(query);
+
       const data = await axios.post(`http://localhost:3000/api/query`, {
         query: query
       });
 
-      // const data = await request(query);
-      setResponse(data);
+      const result = data?.data?.result ?? data;
+      console.log(result);
+      const responseData = typeof result === "string" ? JSON.parse(result) : result;
+      // console.log(responseData);
+      // 
+      setResponse(responseData);
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      console.error('Error fetching query response:', error);
     }
   }
 

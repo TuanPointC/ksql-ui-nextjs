@@ -19,13 +19,20 @@ const queryCommand = async (query) => {
   const ksqlPayload = { ksql: fixedQuery };
 
 
-  const response = await axiosInstance.post(`${endpoint}`, ksqlPayload, {
-    headers: { 'Content-Type': 'application/json' },
-  });
+  try {
+    const response = await axiosInstance.post(`${endpoint}`, ksqlPayload, {
+      headers: { 'Content-Type': 'application/json' },
+    });
 
-  return typeof response.data === 'string'
-    ? response.data
-    : JSON.stringify(response.data, null, 2);
+    return typeof response.data === 'string'
+      ? response.data
+      : JSON.stringify(response.data, null, 2);
+  }
+  catch (error) {
+    console.log(error.code)
+    return ({'Error executing query': error?.code});
+  }
+
 };
 
 export async function POST(req) {
@@ -34,6 +41,7 @@ export async function POST(req) {
   }
   const body = await req.json();
   const query = body?.query || '';
+  const result = await queryCommand(query);
 
   try {
     const result = await queryCommand(query);
@@ -41,9 +49,9 @@ export async function POST(req) {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
     });
+
   } catch (error) {
-    console.error('Query error:', error.message);
-    return new Response(JSON.stringify({ error: error.message || 'Something went wrong' }), {
+    return new Response(JSON.stringify({ error: error || 'Something went wrong' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
     });
