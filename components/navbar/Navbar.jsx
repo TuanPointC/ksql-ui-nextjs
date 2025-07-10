@@ -17,7 +17,8 @@ import RestoreIcon from '@mui/icons-material/Restore';
 import SettingsInputAntennaIcon from '@mui/icons-material/SettingsInputAntenna';
 import TopicIcon from '@mui/icons-material/Topic';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
-import './Navbar.scss'; 
+import { usePathname } from 'next/navigation';
+import './Navbar.scss';
 
 
 const menuItems = [
@@ -69,6 +70,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
+  const pathname = usePathname();
   return (
     <Drawer variant="permanent" open={open}>
       <NavbarIcon open={open} setOpen={setOpen} />
@@ -83,6 +85,7 @@ const Navbar = () => {
                 minHeight: 48,
                 justifyContent: open ? 'initial' : 'center',
                 px: 2.5,
+                backgroundColor: pathname === item.path ? '#4B2D74' : 'transparent',
               }}
             >
               <ListItemIcon
@@ -99,7 +102,7 @@ const Navbar = () => {
           </ListItem>
         ))}
       </List>
-      <NavbarFooter open={open} />
+      {/* <NavbarFooter open={open} /> */}
     </Drawer>
   )
 }

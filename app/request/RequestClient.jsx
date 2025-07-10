@@ -86,7 +86,7 @@ const RequestClient = () => {
     const value = editor.getValue();
     const formatted = format(value, {
       language: 'sql',
-      indent: '  ',
+      indent: '',
       uppercase: true,
     });
     editor.setValue(formatted);

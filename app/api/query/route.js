@@ -4,11 +4,11 @@ const cleanedQuery = (inputQuery) => {
   if (!inputQuery) return '';
 
   const cleaned = inputQuery.replace(/^\s*--.*$/gm, '');
-  const fixed = cleaned.replace(/\b([a-zA-Z_][\w-]*)\b/g, (match) =>
-    match.includes('-') ? `\`${match}\`` : match
-  );
+  // const fixed = cleaned.replace(/\b([a-zA-Z_][\w-]*)\b/g, (match) =>
+  //   match.includes('-') ? `\`${match}\`` : match
+  // );
 
-  return fixed.trim();
+  return cleaned.trim();
 };
 
 const queryCommand = async (query) => {
@@ -29,7 +29,7 @@ const queryCommand = async (query) => {
       : JSON.stringify(response.data, null, 2);
   }
   catch (error) {
-    return ({'Error executing query': error?.code});
+    return ({ 'Error executing query': error?.code });
   }
 
 };

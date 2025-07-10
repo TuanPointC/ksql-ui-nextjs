@@ -48,8 +48,8 @@ export default function page() {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const responses = await axios.post(`http://localhost:3000/api/query`, {
-          query: `DESCRIBE ${streamName};`
+        const responses = await axios.post(`/api/query`, {
+          query: `DESCRIBE "${streamName}";`
         });
         const response = JSON.parse(responses?.data?.result)[0];
         setData(response);
