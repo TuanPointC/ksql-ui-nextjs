@@ -29,7 +29,6 @@ const queryCommand = async (query) => {
       : JSON.stringify(response.data, null, 2);
   }
   catch (error) {
-    console.log(error.code)
     return ({'Error executing query': error?.code});
   }
 

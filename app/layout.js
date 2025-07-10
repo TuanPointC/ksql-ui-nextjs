@@ -5,8 +5,8 @@ import './layout.scss';
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <div className="container">
           <div className="left-block">
             <Navbar />
