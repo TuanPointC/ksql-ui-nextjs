@@ -51,7 +51,7 @@ const page = () => {
     const fetch = async () => {
       try {
         setLoading(true);
-        const responses = await axios.post(`http://localhost:3000/api/query`, {
+        const responses = await axios.post(`/api/query`, {
           query: "SHOW TOPICS;"
         });
         const rawData = JSON.parse(responses?.data?.result)[0]?.topics;

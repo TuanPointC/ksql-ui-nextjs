@@ -13,7 +13,7 @@ const KSQLProperties = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const responses = await axios.post(`http://localhost:3000/api/query`, {
+        const responses = await axios.post(`/api/query`, {
           query: "SHOW PROPERTIES;"
         });
         const response = JSON.parse(responses?.data?.result)[0]?.properties;
