@@ -1,0 +1,21 @@
+:root {
+  --bg-color: white;
+  --bg-color-hover: #f2f6fe;
+  --text-color-white: white;
+  --text-color-black: black;
+  --boder-color: gray;
+}
+
+[data-theme='dark'] {
+  --bg-color: black;
+  --bg-color-hover: #333;
+  --text-color-white: black;
+  --text-color-black: white;
+  --boder-color: rgb(238, 238, 238);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

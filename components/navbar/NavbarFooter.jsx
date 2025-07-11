@@ -8,6 +8,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { useEndpointStore } from '@/store';
+import ThemeToggle from '../ThemeToggle/ThemeToggle.jsx'; // Adjust the import path as necessary
 
 const NavbarFooter = (props) => {
   const [current, setCurrent] = React.useState('');
@@ -32,7 +33,7 @@ const NavbarFooter = (props) => {
   return (
     <div className="navbar-footer">
       <div>
-        <FormControl
+        {/* <FormControl
           className={props.open ? 'select-env-big' : 'select-env-small'}
           size="small">
           <InputLabel
@@ -64,7 +65,8 @@ const NavbarFooter = (props) => {
               </MenuItem>
             ))}
           </Select>
-        </FormControl>
+        </FormControl> */}
+        <ThemeToggle />
       </div>
     </div>
   );

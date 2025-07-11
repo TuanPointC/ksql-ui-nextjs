@@ -32,3 +32,20 @@ export const useCommandStore = create(
   )
 )
 
+
+export const useThemeStore = create(
+  persist(
+    (set) => ({
+      theme: 'light',
+      toggleTheme: () =>
+        set((state) => {
+          const newTheme = state.theme === 'light' ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', newTheme);
+          return { theme: newTheme };
+        }),
+    }),
+    {
+      name: 'theme-storage', // Key for localStorage
+    }
+  )
+);

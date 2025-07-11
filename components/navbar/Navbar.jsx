@@ -102,7 +102,7 @@ const Navbar = () => {
           </ListItem>
         ))}
       </List>
-      {/* <NavbarFooter open={open} /> */}
+      <NavbarFooter open={open} />
     </Drawer>
   )
 }

@@ -3,6 +3,8 @@
   display: flex;
   align-items: center;
   bottom: 20px;
+  left: 20px;
+  overflow: hidden;
 
   .select-env-big {
     min-width: 180px;
@@ -17,9 +19,7 @@
       font-size: 7px;
     }
 
-    .MuiInputBase-root {
-      
-    }
+    .MuiInputBase-root {}
 
     .MuiSelect-select {
       font-size: 0;

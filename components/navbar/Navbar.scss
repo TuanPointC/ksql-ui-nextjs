@@ -1,6 +1,8 @@
+@import '../../styles/globals.scss';
+
 .MuiListItem-root {
   &:hover {
-    background-color: #4A2D74;
+    background-color: var(--bg-color-hover);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 }

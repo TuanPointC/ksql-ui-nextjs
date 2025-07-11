@@ -1,3 +1,5 @@
+@import '@/styles/globals';
+
 $blue: #351C57;
 
 .container {
@@ -6,23 +8,23 @@ $blue: #351C57;
 
   .left-block {
     height: 100vh;
-    background-color: $blue;
+    background-color: var(--bg-color);
     color: white;
-    position: relative; // Add this line
-    overflow: visible; // Add this line
+    position: relative;
+    overflow: visible;
+
+    svg {
+      color: var(--text-color-black);
+    }
 
     .MuiPaper-root {
-      background-color: #351C57;
-      color: white;
+      background-color: var(--bg-color);
+      color: var(--text-color-black);
       overflow: visible;
     }
 
     .MuiListItem-root {
       margin-bottom: 10px;
-    }
-
-    .MuiListItemIcon-root {
-      color: rgb(255, 255, 255);
     }
   }
 
@@ -30,7 +32,7 @@ $blue: #351C57;
     flex: 1;
     min-height: 90vh;
     padding: 10px;
-    background-color: #f2f6fe;
+    background-color: var(--bg-color);
     min-width: 0;
   }
 }

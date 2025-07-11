@@ -16,7 +16,7 @@ const NavbarIcon = (props) => {
     <div className='nav-icon'>
       <Link href="/" className='nav-icon-link'>
         <img
-          src={props.open ? '/logo/logo.png' : '/logo/logo-small.png'}
+          src='/logo/logo.png'
           alt="Logo"
           className={props.open ? 'nav-icon-logo-big' : 'nav-icon-logo-small'}
         />

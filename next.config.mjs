@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  devIndicators: {
+    buildActivity: false, // Disables the build activity indicator (including icons)
+  },
+};
 
 export default nextConfig;

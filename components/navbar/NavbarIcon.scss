@@ -5,7 +5,7 @@ $blue: #351C57;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $blue;
+  background-color: var(--bg-color);
   font-size: 18px;
   position: relative;
 
@@ -16,23 +16,26 @@ $blue: #351C57;
     background-color: $blue;
     color: black;
     z-index: 999;
-    border: 1px solid gray;
+    border: 1px solid var(--boder-color);
   }
 
   .nav-icon-link {
     display: block;
     height: fit-content;
     margin: auto;
+    overflow: hidden;
+
     .nav-icon-logo-big {
       width: 150px;
-      // transition: width 0.5s ease;
+      transition: width 0.5s ease;
     }
   }
 
 
   .nav-icon-logo-small {
-    width: 30px;
-    // transition: width 3s ease;
+    width: 130px;
+    transition: width 0.3s ease;
+    margin-left: -5px;
   }
 
 
@@ -51,4 +54,8 @@ $blue: #351C57;
   .MuiSvgIcon-root {
     z-index: 999;
   }
+}
+
+.MuiPaper-root {
+  border-color: var(--boder-color) !important;
 }
