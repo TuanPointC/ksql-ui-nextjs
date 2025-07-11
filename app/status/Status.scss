@@ -1,7 +1,10 @@
+@import '@/styles/globals.scss';
+
 .ksql-container {
   min-height: 100vh;
   font-family: sans-serif;
   max-width: calc(100vw - 68px);
+  color: var(--text-color-black);
 
   .loading-spinner {
     position: absolute;
@@ -10,8 +13,28 @@
     transform: translate(-50%, -50%);
   }
 
+  thead {
+    th {
+      background-color: var(--table-head-color);
+    }
+
+  }
+
+  th {
+    color: var(--text-color-black) !important;
+  }
+
+  tbody {
+    background-color: var(--table-body-color);
+
+    td {
+      color: var(--text-color-black);
+    }
+  }
+
   .card {
-    background: white;
+    background: var(--bg-card);
+    color: var(--text-color-black);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     width: 100%;
@@ -27,12 +50,12 @@
 
       .label {
         font-weight: 500;
-        color: #4b5563;
+        color: var(--text-color-black);
         margin-right: 10px;
       }
 
       .value {
-        color: #1f2937;
+        color: var(--text-color-black);
         word-break: break-word;
 
         &.running {

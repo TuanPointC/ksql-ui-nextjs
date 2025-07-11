@@ -1,6 +1,9 @@
+@import '@/styles/globals.scss';
+
 .history-container {
   position: relative;
   font-family: sans-serif;
+  color: var(--text-color-black);
 
   .header-history {
     margin: 20px 0;
@@ -19,7 +22,7 @@
     border: 1px solid #eee;
     border-radius: 6px;
     cursor: pointer;
-    background: #fafbfc;
+    background: var(--bg-card);
     transition: background 0.2s;
     display: flex;
     justify-content: space-between;
@@ -39,7 +42,7 @@
     }
 
     &:hover {
-      background: #f0f1f3;
+      background: var(--bg-color-hover);
     }
 
     &:active {

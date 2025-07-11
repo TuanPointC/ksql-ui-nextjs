@@ -1,7 +1,19 @@
+@import '@/styles/globals.scss';
+
 .ksql-stream-details {
   font-family: sans-serif;
   position: relative;
   min-height: 100vh;
+  color: var(--text-color-black);
+
+  .MuiButtonBase-root {
+    color: var(--text-color-black);
+  }
+
+  .MuiPaper-root {
+    background-color: var(--table-body-color) !important;
+    color: var(--text-color-black);
+  }
 
   .overplay {
     position: fixed;
@@ -21,7 +33,15 @@
   }
 
   th {
-    color: white;
+    color: var(--text-color-black);
+  }
+
+  thead {
+    background-color: var(--table-head-color);
+  }
+
+  td {
+    color: var(--text-color-black);
   }
 
   .stream-metadata-card {}
@@ -36,12 +56,12 @@
     }
 
     tr:nth-child(even) {
-      background-color: #f2f2f2;
+      background-color: var(--table-odd-row-color);
     }
 
     tbody {
       scrollbar-width: thin;
-      scrollbar-color: #ccc transparent;
+      scrollbar-color: var(--table-body-color) transparent;
       max-height: 50vh;
       overflow-y: auto;
       display: block;

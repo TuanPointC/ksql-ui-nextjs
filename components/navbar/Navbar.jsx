@@ -74,7 +74,7 @@ const Navbar = () => {
   return (
     <Drawer variant="permanent" open={open}>
       <NavbarIcon open={open} setOpen={setOpen} />
-      <Divider sx={{ backgroundColor: '#4B2D74', margin: '0 0 20px 0' }} />
+      <Divider className='divider'/>
       <List>
         {menuItems.map((item, index) => (
           <ListItem key={item.text} disablePadding sx={{ display: 'block' }}>
@@ -85,7 +85,7 @@ const Navbar = () => {
                 minHeight: 48,
                 justifyContent: open ? 'initial' : 'center',
                 px: 2.5,
-                backgroundColor: pathname === item.path ? '#4B2D74' : 'transparent',
+                backgroundColor: pathname === item.path ? 'var(--bg-color-selected)' : 'transparent',
               }}
             >
               <ListItemIcon

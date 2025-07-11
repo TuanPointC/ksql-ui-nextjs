@@ -1,17 +1,27 @@
 :root {
   --bg-color: white;
   --bg-color-hover: #f2f6fe;
+  --bg-color-selected: #dadee6;
+  --bg-card: rgb(213, 207, 207);
   --text-color-white: white;
   --text-color-black: black;
   --boder-color: gray;
+  --table-head-color: rgb(174, 174, 174);
+  --table-body-color:rgb(206, 206, 206);
+  --table-odd-row-color: rgb(180, 179, 179);
 }
 
 [data-theme='dark'] {
   --bg-color: black;
   --bg-color-hover: #333;
+  --bg-color-selected: #585757;
+  --bg-card: rgb(71, 70, 70);
   --text-color-white: black;
   --text-color-black: white;
   --boder-color: rgb(238, 238, 238);
+  --table-head-color: rgb(109, 108, 108);
+  --table-body-color: rgb(52, 52, 52);
+  --table-odd-row-color: rgb(82, 82, 82);
 }
 
 body {

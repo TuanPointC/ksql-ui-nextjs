@@ -1,5 +1,7 @@
 $blue: #351C57;
 
+@import '@/styles/globals.scss';
+
 .ksql-properties {
   position: relative;
   width: 100%;
@@ -17,7 +19,7 @@ $blue: #351C57;
   }
 
   tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: var(--table-odd-row-color);
   }
 
   th {
