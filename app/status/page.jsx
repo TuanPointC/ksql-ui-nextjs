@@ -21,6 +21,7 @@ const page = () => {
     const fetchStatus = async () => {
       try {
         setIsLoading(true);
+        const info = await axios.get('/api/info')
         const data = await axios.post(`/api/query`, {
           query: "SHOW STATUS;"
         });
@@ -33,6 +34,14 @@ const page = () => {
             serverStatus: status.serverStatus || ''
           });
         }
+
+        const mockInfo = {
+          version: info?.data?.KsqlServerInfo?.version,
+          kafkaClusterId: info?.data?.KsqlServerInfo?.kafkaClusterId,
+          ksqlServiceId: info?.data?.KsqlServerInfo?.ksqlServiceId,
+          serverStatus: info?.data?.KsqlServerInfo?.serverStatus
+        };
+        setInfo(mockInfo);
         setIsLoading(false);
       } catch (err) {
         setIsLoading(false);
@@ -40,13 +49,6 @@ const page = () => {
       }
     };
 
-    const mockInfo = {
-      version: "0.28.2",
-      kafkaClusterId: "rxQ_g7iLSmqs0a_54UwCYg",
-      ksqlServiceId: "ops-confluent",
-      serverStatus: "RUNNING"
-    };
-    setInfo(mockInfo);
     fetchStatus();
   }, []);
 

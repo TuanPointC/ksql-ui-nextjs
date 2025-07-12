@@ -4,9 +4,6 @@ const cleanedQuery = (inputQuery) => {
   if (!inputQuery) return '';
 
   const cleaned = inputQuery.replace(/^\s*--.*$/gm, '');
-  // const fixed = cleaned.replace(/\b([a-zA-Z_][\w-]*)\b/g, (match) =>
-  //   match.includes('-') ? `\`${match}\`` : match
-  // );
 
   return cleaned.trim();
 };
@@ -40,8 +37,6 @@ export async function POST(req) {
   }
   const body = await req.json();
   const query = body?.query || '';
-  const result = await queryCommand(query);
-
   try {
     const result = await queryCommand(query);
     return new Response(JSON.stringify({ result }), {
@@ -56,3 +51,5 @@ export async function POST(req) {
     });
   }
 }
+
+

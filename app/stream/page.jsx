@@ -14,6 +14,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import SearchStream from './SearchStream';
 import Loader from '../../components/Loader/Loader';
 import './Stream.scss';
+import ConfirmModal from './ConfirmModal'
 
 
 
@@ -48,6 +49,8 @@ const page = () => {
   const [page, setPage] = React.useState(0);
   const [dataTable, setdataTable] = useState([]);
   const [searchValue, setSearchValue] = useState('');
+  const [currentStream, setCurrentStream] = useState('')
+  const [open, setOpen] = React.useState(false);
 
   useEffect(() => {
     const fetch = async () => {
@@ -145,8 +148,8 @@ const page = () => {
                     size="large"
                     style={{ color: 'red' }}
                     onClick={(e) => {
-                      e.stopPropagation();
-
+                      setCurrentStream(stream.name)
+                      setOpen(true)
                     }}>
                     <DeleteIcon fontSize="inherit" />
                   </IconButton>
@@ -168,6 +171,16 @@ const page = () => {
           onRowsPerPageChange={handleChangeRowsPerPage}
         />
       </div>
+
+      <ConfirmModal 
+        open={open} 
+        setOpen={setOpen} 
+        currentStream={currentStream} 
+        setdataTable={setdataTable} 
+        dataTable={dataTable} 
+        streams ={streams}
+        setStreams = {setStreams}
+      />
     </div>
   )
 }
