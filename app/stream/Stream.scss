@@ -2,15 +2,19 @@ $blue: #351C57;
 @import '@/styles/globals.scss';
 
 .MuiTableHead-root {
-  background-color: var(--table-head-color);
+  background-color: var(--bg-card);
 
   .MuiTableRow-root {
-    background-color: var(--table-head-color);
+    background-color: var(--bg-card);
 
     .MuiTableCell-root {
-      background-color: var(--table-head-color);
+      background-color: var(--bg-card);
     }
   }
+}
+
+.MuiTableCell-root {
+  border-bottom: none !important;
 }
 
 .stream-container {
@@ -20,10 +24,12 @@ $blue: #351C57;
     justify-content: end;
     margin-bottom: 10px;
     color: var(--text-color-black);
-    .MuiPaper-root{
-      background-color: var(--table-head-color);
-      .MuiInputBase-input{
-        color: var(--text-color-white);
+
+    .MuiPaper-root {
+      background-color: var(--bg-card);
+
+      .MuiInputBase-input {
+        color: var(--text-color-black);
       }
     }
   }
@@ -34,7 +40,7 @@ $blue: #351C57;
     left: 50%;
     transform: translate(-50%, -50%);
     size: 20px;
-    color: $blue;
+    color: var(--text-color-black);
     z-index: 10000;
   }
 }
@@ -43,11 +49,10 @@ $blue: #351C57;
   position: 'sticky';
   bottom: 0;
   left: 0;
-  background: var(--table-head-color);
+  background: var(--bg-card);
   z-index: 2;
   width: '100%';
-  border-top: '1px solid #e0e0e0';
-
+  border-top: 0.5px solid #e0e0e0;
 }
 
 .MuiTableCell-root {
@@ -60,15 +65,17 @@ $blue: #351C57;
 }
 
 .MuiTable-root {
-  background-color: var(--table-body-color);
+  background-color: var(--bg-card);
 }
 
 .MuiTableRow-root:nth-of-type(odd) {
-  background-color: var(--table-odd-row-color)!important;
+  background-color: var(--bg-color-selected) !important;
 }
-.MuiTablePagination-root{
-  color: var(--text-color-black)!important;
-  .MuiTablePaginationActions-root{
-    color: var(--text-color-black)!important;
+
+.MuiTablePagination-root {
+  color: var(--text-color-black) !important;
+
+  .MuiTablePaginationActions-root {
+    color: var(--text-color-black) !important;
   }
 }

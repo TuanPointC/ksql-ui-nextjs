@@ -8,10 +8,10 @@ import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import FastForwardIcon from '@mui/icons-material/FastForward';
 import hljs from 'highlight.js/lib/core';
-import sql from 'highlight.js/lib/languages/sql';
+import n1ql from 'highlight.js/lib/languages/n1ql';
 import 'highlight.js/styles/github.css'; 
 import { useRef, useEffect } from 'react';
-hljs.registerLanguage('sql', sql);
+hljs.registerLanguage('n1ql', n1ql);
 
 const page = () => {
   const { commands, removeCommand } = useCommandStore()
@@ -52,7 +52,7 @@ const page = () => {
               title="Click to copy"
             >
               <pre>
-                <code ref={codeRef} className="language-sql">
+                <code ref={codeRef} className="language-n1ql">
                   {command}
                 </code>
               </pre>

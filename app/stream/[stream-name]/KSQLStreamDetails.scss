@@ -11,7 +11,7 @@
   }
 
   .MuiPaper-root {
-    background-color: var(--table-body-color) !important;
+    background-color: var(--bg-card) !important;
     color: var(--text-color-black);
   }
 
@@ -37,14 +37,17 @@
   }
 
   thead {
-    background-color: var(--table-head-color);
+    background-color: var(--bg-card);
+
+    th {
+      border-bottom: none !important;
+    }
   }
 
   td {
     color: var(--text-color-black);
+    border: none !important;
   }
-
-  .stream-metadata-card {}
 
   .stream-description-card {
 
@@ -55,13 +58,16 @@
       table-layout: fixed;
     }
 
-    tr:nth-child(even) {
-      background-color: var(--table-odd-row-color);
+    tbody {
+      tr:nth-child(odd) {
+        background-color: var(--bg-color-selected);
+      }
     }
+
 
     tbody {
       scrollbar-width: thin;
-      scrollbar-color: var(--table-body-color) transparent;
+      scrollbar-color: var(--bg-card) transparent;
       max-height: 50vh;
       overflow-y: auto;
       display: block;
@@ -79,6 +85,14 @@
       code {
         background: inherit;
       }
+    }
+  }
+}
+
+.stream-cluster-card {
+  tbody {
+    tr:nth-child(odd) {
+      background-color: var(--bg-color-selected);
     }
   }
 }

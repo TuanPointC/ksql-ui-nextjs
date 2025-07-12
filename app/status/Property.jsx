@@ -53,7 +53,7 @@ const KSQLProperties = () => {
           <tbody>
             {(
               data.map((row) => (
-                <tr key={row.id} style={{ borderBottom: '1px solid #eee' }}>
+                <tr key={row.id}>
                   <td style={{ padding: 8, border: '1px solid #ddd' }}>{row.name}</td>
                   <td style={{ padding: 8, border: '1px solid #ddd' }}>{row.value}</td>
                   <td style={{ padding: 8, border: '1px solid #ddd' }}>{row.scope}</td>

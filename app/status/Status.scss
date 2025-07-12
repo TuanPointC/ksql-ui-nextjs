@@ -15,20 +15,28 @@
 
   thead {
     th {
-      background-color: var(--table-head-color);
+      background-color: var(--bg-card);
     }
 
   }
 
   th {
     color: var(--text-color-black) !important;
+    border: none !important;
+
   }
 
   tbody {
-    background-color: var(--table-body-color);
+    background-color: var(--bg-card);
+    border: none !important;
 
     td {
       color: var(--text-color-black);
+      border: none !important;
+    }
+
+    tr:nth-of-type(odd) {
+      background-color: var(--bg-color-selected) !important;
     }
   }
 

@@ -18,8 +18,8 @@ $blue: #351C57;
     border-collapse: collapse;
   }
 
-  tr:nth-child(even) {
-    background-color: var(--table-odd-row-color);
+  tr:nth-child(odd) {
+    background-color: var(--bg-color-selected);
   }
 
   th {

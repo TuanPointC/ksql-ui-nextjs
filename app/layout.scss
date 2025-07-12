@@ -8,7 +8,7 @@ $blue: #351C57;
 
   .left-block {
     height: 100vh;
-    background-color: var(--bg-color);
+    background-color: var(--navbar-color);
     color: white;
     position: relative;
     overflow: visible;
@@ -18,7 +18,7 @@ $blue: #351C57;
     }
 
     .MuiPaper-root {
-      background-color: var(--bg-color);
+      background-color: var(--navbar-color);
       color: var(--text-color-black);
       overflow: visible;
     }

@@ -19,7 +19,7 @@
 
   .history-item {
     padding: 12px;
-    border: 1px solid #eee;
+    border: 0.5px solid var(--bg-color-hover);
     border-radius: 6px;
     cursor: pointer;
     background: var(--bg-card);
@@ -54,4 +54,20 @@
       gap: 8px;
     }
   }
+}
+
+.hljs-string,
+.hljs-section,
+.hljs-selector-class,
+.hljs-template-variable,
+.hljs-deletion {
+  color: red;
+}
+
+.history-container .history-item .hljs-string {
+  color: var(--text-color-black);
+}
+
+.history-container .history-item pre code {
+  color: var(--text-color-black);
 }

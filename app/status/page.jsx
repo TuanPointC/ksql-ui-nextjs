@@ -21,7 +21,9 @@ const page = () => {
     const fetchStatus = async () => {
       try {
         setIsLoading(true);
-        const data = await request("show status;");
+        const data = await axios.post(`/api/query`, {
+          query: "SHOW STATUS;"
+        });
         if (data && data.length > 0) {
           const status = data[0];
           setInfo({
@@ -52,7 +54,7 @@ const page = () => {
     return (
       <div className="ksql-container">
         <div className="loading-spinner">
-          <Loader loading={isLoading} color='#351C57' />
+          <Loader loading={isLoading} color='var(--text-color-black)' />
         </div>
       </div>
     );

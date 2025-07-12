@@ -75,7 +75,7 @@ export default function page() {
   if (data === null || loading) {
     return (
       <Box p={4} className="ksql-stream-details">
-        <Loader loading={loading} className="loader" color='#351C57' />
+        <Loader loading={loading} className="loader" color='var(--text-color-black)' />
       </Box>
     );
   }
@@ -163,7 +163,7 @@ export default function page() {
         </CardContent>
       </Card>
 
-      <Card variant="outlined">
+      <Card variant="outlined" className='stream-cluster-card'>
         <CardContent>
           <Typography variant="h6">Cluster Statistics</Typography>
           <TableContainer component={Paper} sx={{ mt: 2 }}>

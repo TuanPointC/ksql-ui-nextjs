@@ -102,7 +102,7 @@ const page = () => {
 
   return (
     <div className="stream-container">
-      <Loader loading={loading} className="loader" color='#351C57' />
+      <Loader loading={loading} className="loader" color='var(--text-color-black)' />
 
       <div className='search-container'>
         <Search

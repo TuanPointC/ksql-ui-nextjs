@@ -1,13 +1,13 @@
 @import '@/styles/globals.scss';
 
 .MuiTableHead-root {
-  background-color: var(--table-head-color);
+  background-color: var(--bg-card);
 
   .MuiTableRow-root {
-    background-color: var(--table-body-color);
+    background-color: var(--bg-card);
 
     .MuiTableCell-root {
-      background-color: var(--table-body-color);
+      background-color: var(--bg-card);
     }
   }
 }
@@ -24,22 +24,29 @@
   }
 
   .MuiPaper-root {
-    background-color: var(--table-head-color);
+    background-color: var(--bg-card);
 
     .MuiInputBase-input {
-      color: var(--text-color-white);
+      color: var(--text-color-black);
     }
   }
 
   th {
     color: var(--text-color-black) !important;
+    border-bottom: none !important;
+
   }
 
   tbody {
-    background-color: var(--table-body-color);
+    background-color: var(--bg-card);
 
     td {
       color: var(--text-color-black);
+      border-bottom: none !important;
+    }
+
+    tr:nth-of-type(odd) {
+      background-color: var(--bg-color-selected) !important;
     }
   }
 

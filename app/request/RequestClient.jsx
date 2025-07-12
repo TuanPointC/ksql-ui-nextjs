@@ -3,7 +3,7 @@
 import Editor from '@monaco-editor/react';
 import { useRef, useState, useEffect } from 'react';
 import Button from '@mui/material/Button';
-import { useCommandStore } from '@/store';
+import { useCommandStore, useThemeStore } from '@/store';
 import Loader from '../../components/Loader/Loader';
 import JsonViewer from '../../components/JsonViewer/JsonViewer';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
@@ -23,6 +23,7 @@ const RequestClient = () => {
   const containerRef = useRef(null);
   const leftRef = useRef(null);
   const { addCommands } = useCommandStore();
+  const { theme } = useThemeStore();
   const [query, setQuery] = useState('');
 
   const searchParams = useSearchParams();
@@ -112,15 +113,15 @@ const RequestClient = () => {
             defaultLanguage="sql"
             defaultValue=""
             onMount={handleEditorDidMount}
-            theme="vs-dark"
+            theme={theme === 'dark' ? 'vs-dark' : 'vs-light'}
             fontSize={24}
             value={query}
           />
         </div>
         <div className='resizer' onMouseDown={() => setIsResizing(true)}></div>
         <div className='right-block-request'>
-          <Loader loading={loading} />
-          <JsonViewer response={response} />
+          <Loader loading={loading} color= "var(--text-color-black)"/>
+          <JsonViewer response={response} theme={theme === 'dark' ? 'monokai': 'light'} />
         </div>
       </div>
     </div>

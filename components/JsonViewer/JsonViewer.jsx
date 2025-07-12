@@ -16,7 +16,7 @@ const JsonViewer = ({ response, theme }) => {
         src={response ?? {}}
         className='response'
         style={{ height: 'calc(100vh - 20px)', overflow: 'auto', width: '100%' }}
-        theme={theme ? theme : "monokai"}
+        theme={theme ? theme : "summerfruit"}
       />
     </div>
   );
