@@ -7,14 +7,16 @@ KSQL UI is a user-friendly interface for interacting with KSQL, a streaming SQL 
 ### Features
 
 - Query Editor: Write and execute KSQL queries.
-- Streams Management: Display, Describe, Drop, ... streams.
-- Topic Management: Display Kafka topics.
+- Streams Management: List, Describe, Drop.
+- Topic Management: List Kafka topics.
 - Cluster management: Display cluster's information
 
 ### Prerequisites
 
 Before setting up KSQL UI, ensure you have the following:
 - Node.js: Version 24.x or higher
+- Yarn
+- Docker
 
 ### Installation
 Follow these steps to set up KSQL UI locally:
