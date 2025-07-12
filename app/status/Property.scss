@@ -6,7 +6,8 @@ $blue: #351C57;
   position: relative;
   width: 100%;
   background: white;
-  table{
+
+  table {
     max-width: 500px;
   }
 
@@ -35,5 +36,10 @@ $blue: #351C57;
   .box-table {
     max-height: 100vh;
     overflow-y: auto;
+
+    table {
+      min-width: calc(100vw - 60px);
+      overflow-y: auto;
+    }
   }
 }
