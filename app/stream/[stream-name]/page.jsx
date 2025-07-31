@@ -55,7 +55,6 @@ export default function page() {
         setData(response);
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching stream detail:', error);
       } finally {
         setLoading(false);
       }

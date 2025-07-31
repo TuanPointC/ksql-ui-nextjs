@@ -25,7 +25,6 @@ const KSQLStreamDetailRawData = ({ isOpen, data, onClose }) => {
   }, [isOpen, onClose]);
 
   if (!isOpen) return null;
-  console.log(theme)
   return (
     <pre
       className={isOpen ? 'raw-data-editor visible' : 'raw-data-editor'}>

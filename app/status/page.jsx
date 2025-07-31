@@ -45,7 +45,6 @@ const page = () => {
         setIsLoading(false);
       } catch (err) {
         setIsLoading(false);
-        console.error('Error fetching KSQL server status:', err);
       }
     };
 

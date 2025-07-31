@@ -30,7 +30,6 @@ const KSQLProperties = () => {
           setData(propertiesData);
         }
       } catch (error) {
-        console.error('Error fetching KSQL server properties:', error);
       } finally {
         setLoading(false);
       }
